@@ -1,0 +1,18 @@
+[project]
+name = "codesearch"
+version = "0.1.0"
+description = "Semantic code search CLI — index a repo, find code by meaning"
+requires-python = ">=3.10"
+dependencies = [
+    "onnxruntime",
+    "tokenizers",
+    "numpy",
+    "click",
+]
+
+[project.scripts]
+codesearch = "codesearch.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
