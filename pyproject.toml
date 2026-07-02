@@ -1,14 +1,36 @@
 [project]
-name = "codesearch"
+name = "semantic-codesearch"
 version = "0.1.0"
-description = "Semantic code search CLI — index a repo, find code by meaning"
-requires-python = ">=3.10"
-dependencies = [
-    "onnxruntime",
-    "tokenizers",
-    "numpy",
-    "click",
+description = "Semantic code search CLI — find code by meaning, not just text. Powered by bge-small-code-v1."
+requires-python = ">=3.10,<3.14"
+license = {text = "MIT"}
+authors = [{name = "Arnav Kewalram", email = "arnavkewalram@gmail.com"}]
+readme = "README.md"
+keywords = ["code-search", "semantic-search", "embeddings", "code", "retrieval"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Text Processing :: Indexing",
 ]
+dependencies = [
+    "onnxruntime>=1.16",
+    "tokenizers>=0.15",
+    "numpy>=1.24",
+    "click>=8.0",
+    "huggingface_hub>=0.20",
+]
+
+[project.urls]
+Homepage = "https://github.com/arnavkewalram/codesearch"
+Repository = "https://github.com/arnavkewalram/codesearch"
+Issues = "https://github.com/arnavkewalram/codesearch/issues"
 
 [project.scripts]
 codesearch = "codesearch.cli:main"
@@ -16,3 +38,6 @@ codesearch = "codesearch.cli:main"
 [build-system]
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["codesearch*"]
