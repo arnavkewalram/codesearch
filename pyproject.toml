@@ -1,5 +1,5 @@
 [project]
-name = "semantic-codesearch"
+name = "semcode-search"
 version = "0.1.0"
 description = "Semantic code search CLI — find code by meaning, not just text. Powered by bge-small-code-v1."
 requires-python = ">=3.10,<3.14"
